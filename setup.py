@@ -23,15 +23,14 @@ setup(name='ArticleParser',
       packages=[
           'parser'
       ],
-      include_package_data=True,
+      package_dir={'articleparser': 'articleparser'},
       install_requires=requirements,
+      # Include additional files
+      include_package_data=True,
+      # Additional classifiers
       classifiers=[
-          'Development Status :: 3 - Alpha',
-          'Intended Audience :: Developers',
-          'Natural Language :: English',
           'Programming Language :: Python :: 3',
-          'Programming Language :: Python :: 3.5',
-          'Programming Language :: Python :: 3.6',
-          'Programming Language :: Python :: 3.7',
-      ]
+          'License :: OSI Approved :: MIT License',
+          'Operating System :: OS Independent',
+      ],
       )
