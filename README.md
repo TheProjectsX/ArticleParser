@@ -23,9 +23,9 @@ pip install git+https://github.com/TheProjectsX/ArticleParser.git
 ### Get Articles via Search Query
 
 ```python
-import ArticleParser
+import articleparser
 
-articlesData = ArticleParser.getArticles(query="What is Node JS?")
+articlesData = articleparser.getArticles(query="What is Node JS?")
 for article in articlesData:
     print("URL:", article["url"])
     print("Title:", article["title"])
@@ -35,9 +35,9 @@ for article in articlesData:
 ### Get Google Search Results
 
 ```python
-import ArticleParser
+import articleparser
 
-searchResults = ArticleParser.getGoogleSearchResults(query="What is Node JS?")
+searchResults = articleparser.getGoogleSearchResults(query="What is Node JS?")
 for article in articlesData:
     print("URL:", article["url"])
     print("Title:", article["title"])
@@ -49,9 +49,9 @@ for article in articlesData:
 User can pass a certain Webpage URL to parse it's content
 
 ```python
-import ArticleParser
+import articleparser
 
-article = ArticleParser.parseArticle(url="")
+article = articleparser.parseArticle(url="")
 
 print("Title:", article["title"])
 print("Content:", article["content"][:400])
