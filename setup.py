@@ -21,7 +21,7 @@ setup(name='ArticleParser',
       author_email='',
       license='MIT',
       packages=[
-          'parser'
+          'articleparser'
       ],
       package_dir={'articleparser': 'articleparser'},
       install_requires=requirements,
