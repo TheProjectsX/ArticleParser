@@ -61,7 +61,6 @@ def parseArticle(url: str, timeout=10, max_length=14400, markup=False, ignore_li
             else:
                 content = newspaper.fulltext(html)
         except Exception as e:
-            print(e)
             return None
 
     articleData = {
