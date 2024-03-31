@@ -1,35 +1,37 @@
-from setuptools import setup, find_packages
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
-setup(
-    name='ArticleParser',
-    version='0.1',
-    packages=find_packages(),
-    # Description
-    description='Parse Articles from WEB via Search Query',
-    long_description='A Python package for parsing articles from various sources just via Search Query',
-    long_description_content_type='text/markdown',
-    # Author information
-    author='TheProjectsX',
-    author_email='',
-    # Project URL
-    url='https://github.com/TheProjectsX/ArticleParser',
-    # License information
-    license='MIT',
-    # Dependencies
-    install_requires=[
-        'googlesearch-python==1.2.3',
-        'requests==2.31.0',
-        'beautifulsoup4==4.12.3',
-        'newspaper3k==0.2.8',
-        'wikipedia==1.4.0',
-        'html2text==2024.2.26',
-    ],
-    # Include additional files
-    include_package_data=True,
-    # Additional classifiers
-    classifiers=[
-        'Programming Language :: Python :: 3',
-        'License :: OSI Approved :: MIT License',
-        'Operating System :: OS Independent',
-    ],
-)
+
+try:
+    from setuptools import setup
+except ImportError:
+    from distutils.core import setup
+
+# from requirements import r
+
+with open("requirements.txt") as f:
+    requirements = [req.strip() for req in f.readlines()]
+
+
+setup(name='ArticleParser',
+      version='1.0',
+      url='https://github.com/TheProjectsX/ArticleParser',
+      description='Parse Articles from WEB via Search Query',
+      author='TheProjectsX',
+      author_email='',
+      license='MIT',
+      packages=[
+          'parser'
+      ],
+      include_package_data=True,
+      install_requires=requirements,
+      classifiers=[
+          'Development Status :: 3 - Alpha',
+          'Intended Audience :: Developers',
+          'Natural Language :: English',
+          'Programming Language :: Python :: 3',
+          'Programming Language :: Python :: 3.5',
+          'Programming Language :: Python :: 3.6',
+          'Programming Language :: Python :: 3.7',
+      ]
+      )
